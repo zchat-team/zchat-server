@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/zmicro-team/zchat-server/internal/model"
 	"github.com/zmicro-team/zchat-server/internal/router"
 	"github.com/zmicro-team/zchat-server/pkg/runtime"
 	"github.com/zmicro-team/zmicro"
@@ -11,10 +12,7 @@ import (
 func main() {
 	app := zmicro.New(
 		zmicro.InitHttpServer(InitHttpServer),
-		zmicro.Before(func() error {
-			runtime.Setup()
-			return nil
-		}),
+		zmicro.Before(before),
 	)
 
 	if err := app.Run(); err != nil {
@@ -24,5 +22,22 @@ func main() {
 
 func InitHttpServer(r *gin.Engine) error {
 	router.Setup(r)
+	return nil
+}
+
+func before() error {
+	runtime.Setup()
+	db := runtime.GetDB()
+	if err := db.AutoMigrate(
+		&model.User{},
+		&model.UserLoginLog{},
+		&model.Friend{},
+		&model.FriendRequest{},
+		&model.Group{},
+		&model.GroupMember{},
+	); err != nil {
+		log.Error(err)
+		return err
+	}
 	return nil
 }
