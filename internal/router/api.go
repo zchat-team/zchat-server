@@ -6,9 +6,9 @@ import (
 	"encoding/pem"
 	"errors"
 	"github.com/gin-gonic/gin"
-	"github.com/zmicro-team/zchat-server/api/passport"
-	"github.com/zmicro-team/zchat-server/internal/middleware"
-	sPassport "github.com/zmicro-team/zchat-server/internal/service/passport"
+	"github.com/zchat-team/zchat-server/api/passport"
+	"github.com/zchat-team/zchat-server/internal/middleware"
+	sPassport "github.com/zchat-team/zchat-server/internal/service/passport"
 	"github.com/zmicro-team/zmicro/core/log"
 	"io/ioutil"
 )

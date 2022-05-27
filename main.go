@@ -2,9 +2,9 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/zmicro-team/zchat-server/internal/model"
-	"github.com/zmicro-team/zchat-server/internal/router"
-	"github.com/zmicro-team/zchat-server/pkg/runtime"
+	"github.com/zchat-team/zchat-server/internal/model"
+	"github.com/zchat-team/zchat-server/internal/router"
+	"github.com/zchat-team/zchat-server/pkg/runtime"
 	"github.com/zmicro-team/zmicro"
 	"github.com/zmicro-team/zmicro/core/log"
 )

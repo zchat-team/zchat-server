@@ -5,7 +5,7 @@ import (
 	ginSwagger "github.com/swaggo/gin-swagger"
 	"github.com/swaggo/gin-swagger/swaggerFiles"
 	"github.com/swaggo/swag"
-	"github.com/zmicro-team/zchat-server/swagger"
+	"github.com/zchat-team/zchat-server/swagger"
 )
 
 func Swagger(r gin.IRouter) {

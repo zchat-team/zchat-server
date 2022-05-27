@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/zmicro-team/zchat-server/pkg/runtime"
+	"github.com/zchat-team/zchat-server/pkg/runtime"
 	"github.com/zmicro-team/zmicro/core/util/env"
 	"io/ioutil"
 	"strings"
@@ -18,14 +18,14 @@ import (
 	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
 
-	api "github.com/zmicro-team/zchat-server/api/passport"
-	"github.com/zmicro-team/zchat-server/errno"
-	"github.com/zmicro-team/zchat-server/internal/constant"
-	"github.com/zmicro-team/zchat-server/internal/model"
-	"github.com/zmicro-team/zchat-server/pkg/auth"
-	"github.com/zmicro-team/zchat-server/pkg/idgen"
-	"github.com/zmicro-team/zchat-server/pkg/util"
-	"github.com/zmicro-team/zchat-server/pkg/zcontext"
+	api "github.com/zchat-team/zchat-server/api/passport"
+	"github.com/zchat-team/zchat-server/errno"
+	"github.com/zchat-team/zchat-server/internal/constant"
+	"github.com/zchat-team/zchat-server/internal/model"
+	"github.com/zchat-team/zchat-server/pkg/auth"
+	"github.com/zchat-team/zchat-server/pkg/idgen"
+	"github.com/zchat-team/zchat-server/pkg/util"
+	"github.com/zchat-team/zchat-server/pkg/zcontext"
 )
 
 type IpLimit struct {
@@ -253,7 +253,7 @@ func (s *Service) SmsLogin(ctx context.Context, req *api.SmsLoginReq, rsp *api.S
 
 	v.LastLoginIp = clientIp
 	v.LastLoginTime = time.Now()
-	s.db.Model(&v).Updates(&v)
+	s.db.Model(&v).Where(&model.User{Id: uid}).Updates(&v)
 
 	rsp.AccessToken = token.AccessToken
 	rsp.RefreshToken = token.RefreshToken

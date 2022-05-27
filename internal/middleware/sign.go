@@ -14,7 +14,7 @@ import (
 	"github.com/zmicro-team/zmicro/core/log"
 	zgin "github.com/zmicro-team/zmicro/core/transport/http"
 
-	"github.com/zmicro-team/zchat-server/pkg/signature"
+	"github.com/zchat-team/zchat-server/pkg/signature"
 )
 
 // 客户端签名加密过程

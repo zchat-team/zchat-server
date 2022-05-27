@@ -6,10 +6,10 @@ import (
 	"github.com/gin-gonic/gin"
 	zgin "github.com/zmicro-team/zmicro/core/transport/http"
 
-	"github.com/zmicro-team/zchat-server/errno"
-	"github.com/zmicro-team/zchat-server/internal/service/passport"
-	"github.com/zmicro-team/zchat-server/pkg/auth"
-	"github.com/zmicro-team/zchat-server/pkg/zcontext"
+	"github.com/zchat-team/zchat-server/errno"
+	"github.com/zchat-team/zchat-server/internal/service/passport"
+	"github.com/zchat-team/zchat-server/pkg/auth"
+	"github.com/zchat-team/zchat-server/pkg/zcontext"
 )
 
 func authToken(token string) (acc *auth.Account, err error) {

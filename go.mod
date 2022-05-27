@@ -1,4 +1,4 @@
-module github.com/zmicro-team/zchat-server
+module github.com/zchat-team/zchat-server
 
 go 1.18
 

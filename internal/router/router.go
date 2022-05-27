@@ -3,7 +3,7 @@ package router
 import (
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
-	"github.com/zmicro-team/zchat-server/pkg/validate"
+	"github.com/zchat-team/zchat-server/pkg/validate"
 	zgin "github.com/zmicro-team/zmicro/core/transport/http"
 	"net/http"
 	"time"

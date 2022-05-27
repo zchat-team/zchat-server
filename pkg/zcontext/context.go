@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"github.com/spf13/cast"
-	"github.com/zmicro-team/zchat-server/pkg/auth"
+	"github.com/zchat-team/zchat-server/pkg/auth"
 	zgin "github.com/zmicro-team/zmicro/core/transport/http"
 )
 

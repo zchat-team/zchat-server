@@ -2,8 +2,8 @@ package runtime
 
 import (
 	"github.com/go-redis/redis/v8"
-	zdb "github.com/zmicro-team/zchat-server/pkg/database/db"
-	zredis "github.com/zmicro-team/zchat-server/pkg/database/redis"
+	zdb "github.com/zchat-team/zchat-server/pkg/database/db"
+	zredis "github.com/zchat-team/zchat-server/pkg/database/redis"
 	"github.com/zmicro-team/zmicro/core/config"
 	"github.com/zmicro-team/zmicro/core/log"
 	"gorm.io/gorm"

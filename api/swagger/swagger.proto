@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/zmicro-team/zchat-server/api/swagger";
+option go_package = "github.com/zchat-team/zchat-server/api/swagger";
 package swagger;
 
 import "protoc-gen-openapiv2/options/annotations.proto";
