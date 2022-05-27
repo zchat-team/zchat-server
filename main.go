@@ -11,8 +11,8 @@ import (
 
 func main() {
 	app := zmicro.New(
-		zmicro.InitHttpServer(InitHttpServer),
 		zmicro.Before(before),
+		zmicro.InitHttpServer(InitHttpServer),
 	)
 
 	if err := app.Run(); err != nil {

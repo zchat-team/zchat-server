@@ -29,4 +29,5 @@ func Setup(engine *gin.Engine) {
 		MaxAge:           12 * time.Hour,
 	}))
 
+	RegisterAPI(engine)
 }

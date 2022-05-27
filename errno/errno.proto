@@ -14,6 +14,9 @@ enum ErrorReason {
   invalid_token            = 101 [(errors.code) = 1001, (errors.msg) = "无效的令牌"];
   token_expired            = 102 [(errors.code) = 1002, (errors.msg) = "令牌过期"];
   token_revoked            = 103 [(errors.code) = 1003, (errors.msg) = "令牌已被吊销"];
+  user_not_exists          = 104 [(errors.code) = 1004, (errors.msg) = "用户不存在"];
+  user_no_passwd           = 105 [(errors.code) = 1005, (errors.msg) = "用户未设置密码, 不能用密码登录"];
+  password_incorrect       = 106 [(errors.code) = 1006, (errors.msg) = "密码错误"];
 }
 
 
