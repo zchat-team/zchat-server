@@ -32,7 +32,7 @@ func before() error {
 		&model.User{},
 		&model.UserLoginLog{},
 		&model.Friend{},
-		&model.FriendRequest{},
+		&model.Application{},
 		&model.Group{},
 		&model.GroupMember{},
 	); err != nil {

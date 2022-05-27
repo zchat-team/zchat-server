@@ -296,17 +296,7 @@ func (s *Service) register(ctx context.Context, mobile string) (uid int64, err e
 		if err := tx.Create(&u).Error; err != nil {
 			return err
 		}
-
-		//acc := model.Account{Id: uid}
-		//if err := tx.Create(&acc).Error; err != nil {
-		//	return err
-		//}
-		//if err = tx.Create(&model.UserType{
-		//	Uid:  uid,
-		//	Type: constant.UserNormal,
-		//}).Error; err != nil {
-		//	return err
-		//}
+		
 		return nil
 	})
 	if err != nil {

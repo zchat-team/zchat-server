@@ -5,7 +5,8 @@ import (
 	"time"
 )
 
-type FriendRequest struct {
+// 好友申请
+type Application struct {
 	Id        int64                 `json:"id" gorm:"primaryKey;column:id;type:bigint(20) auto_increment"`
 	Uid       int64                 `json:"uid" gorm:"column:uid;type:bigint(20);not null;default:0"`
 	FriendUid int64                 `json:"friend_uid" gorm:"column:friend_uid;type:bigint(20);not null;default:0"`
@@ -17,6 +18,6 @@ type FriendRequest struct {
 	ExpiresAt int64                 `json:"expires_at" gorm:"column:expires_at;type:bigint(20);not null;default:0"`
 }
 
-func (_ *FriendRequest) TableName() string {
-	return "friend_request"
+func (_ *Application) TableName() string {
+	return "application"
 }
